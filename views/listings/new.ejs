@@ -1,0 +1,81 @@
+<% layout("/layouts/boilerplate")%>
+<body>
+  <div class="row">
+    <div class="col-8 offset-2">
+      <br /><br />
+      <h3>Create a new listing</h3>
+      <form
+        method="POST"
+        action="/listings"
+        novalidate
+        class="needs-validation"
+        enctype="multipart/from-data"
+      >
+        <div class="mb-3">
+          <label for="title" class="form-label">Title :</label>
+          <input
+            type="text"
+            placeholder="Add a catchy title"
+            class="form-control"
+            name="title"
+            required
+          />
+        </div>
+
+        <div class="valid-feedback">Valid Title</div>
+
+        <div class="mb-3">
+          <label for="description" class="form-label">Description :</label>
+          <textarea
+            placeholder="Enter Description"
+            name="description"
+            class="form-control"
+            required
+          ></textarea>
+        </div>
+
+        <div class="mb-3">
+          <label for="image" class="form-label">Upload Listing Image :</label>
+          <input name="image" class="form-control" type="file" />
+        </div>
+
+        <div class="row">
+          <div class="mb-3 col-md-4">
+            <label for="price" class="form-label">Price :</label>
+            <input
+              placeholder="1200"
+              name="price"
+              type="number"
+              class="form-control"
+              required
+            />
+            <div class="invalid-feedback">Invalid price</div>
+          </div>
+
+          <div class="mb-3 col-md-8">
+            <label for="country" class="form-label">Country :</label>
+            <input
+              placeholder="India"
+              name="country"
+              class="form-control"
+              required
+            />
+            <div class="invalid-feedback">InValid Location</div>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="location" class="form-label">Location :</label>
+          <input
+            placeholder="Jaipur Rajasthan"
+            name="location"
+            class="form-control"
+            required
+          />
+        </div>
+        <button class="btn btn-dark add-btn">Add Data</button>
+        <br /><br />
+      </form>
+    </div>
+  </div>
+</body>
